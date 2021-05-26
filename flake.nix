@@ -42,10 +42,18 @@
         inherit system;
 
 	modules = [
-	  ./system/configuration.nix
+	  ./system/raul-workstation/configuration.nix
+	];
+      };
+
+      nixos-laptop-dell = lib.nixosSystem {
+        inherit system;
+
+	modules = [
+	  ./system/nixos-laptop-dell/configuration.nix
 	];
       };
     };
-  };
 
+  };
 }
