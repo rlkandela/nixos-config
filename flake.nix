@@ -20,13 +20,6 @@
       };
     };
 
-    unst-pkgs = import nixpkgs-unstable {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-    };
-  
     lib = nixpkgs.lib;
 
   in {

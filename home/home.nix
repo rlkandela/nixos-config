@@ -4,6 +4,7 @@
   imports = [
     # Include the rest of the home-manager config
     ./git.nix
+    ./neovim.nix
     ./python.nix
     ./bash.nix
     ./environment-vars.nix
@@ -21,7 +22,6 @@
   home.packages = with pkgs; [
     firefox-wayland
     neofetch
-    nodejs
   ];
 
   # This value determines the Home Manager release that your
