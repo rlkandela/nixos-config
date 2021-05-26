@@ -19,21 +19,28 @@
         allowUnfree = true;
       };
     };
+
+    unst-pkgs = import nixpkgs-unstable {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+    };
   
-  lib = nixpkgs.lib;
+    lib = nixpkgs.lib;
 
   in {
-	
+
     homeConfigurations = {
       rlkandela = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs;
-	username = "rlkandela";
-	homeDirectory = "/home/rlkandela";
-	configuration = {
-	  imports = [
-	    ./home/home.nix
-	  ];
-	};
+	      username = "rlkandela";
+	      homeDirectory = "/home/rlkandela";
+	      configuration = {
+	        imports = [
+	          ./home/home.nix
+	        ];
+	      };
       };
     };
 
@@ -41,17 +48,17 @@
       raul-workstation = lib.nixosSystem {
         inherit system;
 
-	modules = [
-	  ./system/raul-workstation/configuration.nix
-	];
+	      modules = [
+	        ./system/raul-workstation/configuration.nix
+	      ];
       };
 
       nixos-laptop-dell = lib.nixosSystem {
         inherit system;
 
-	modules = [
-	  ./system/nixos-laptop-dell/configuration.nix
-	];
+        modules = [
+          ./system/nixos-laptop-dell/configuration.nix
+        ];
       };
     };
 
