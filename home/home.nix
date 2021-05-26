@@ -2,7 +2,11 @@
 
 {
   imports = [
+    # Include the rest of the home-manager config
+    ./git.nix
     ./python.nix
+    ./bash.nix
+    ./environment-vars.nix
   ];
 
   # Let Home Manager install and manage itself.
@@ -13,15 +17,12 @@
   home.username = "rlkandela";
   home.homeDirectory = "/home/rlkandela";
 
+  # Packages to install localy
   home.packages = with pkgs; [
-    git git-crypt gitAndTools.gitflow
+    firefox-wayland
+    neofetch
+    nodejs
   ];
-
-  programs.git = {
-    enable = true;
-    userName = "rlkandela";
-    userEmail = "rlkandela@gmail.com";
-  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
