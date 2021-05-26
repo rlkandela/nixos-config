@@ -1,2 +1,2 @@
-*.lock
-result
+/flake.lock
+/result*
