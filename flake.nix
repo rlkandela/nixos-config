@@ -27,13 +27,13 @@
     homeConfigurations = {
       rlkandela = home-manager.lib.homeManagerConfiguration {
         inherit system pkgs;
-	      username = "rlkandela";
-	      homeDirectory = "/home/rlkandela";
-	      configuration = {
-	        imports = [
-	          ./home/home.nix
-	        ];
-	      };
+        username = "rlkandela";
+        homeDirectory = "/home/rlkandela";
+        configuration = {
+          imports = [
+            ./home/home.nix
+          ];
+        };
       };
     };
 
@@ -41,9 +41,9 @@
       raul-workstation = lib.nixosSystem {
         inherit system;
 
-	      modules = [
-	        ./system/raul-workstation/configuration.nix
-	      ];
+        modules = [
+          ./system/raul-workstation/configuration.nix
+        ];
       };
 
       nixos-laptop-dell = lib.nixosSystem {
