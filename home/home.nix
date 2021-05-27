@@ -4,7 +4,7 @@
   imports = [
     # Include the rest of the home-manager config
     ./git.nix
-    ./neovim.nix
+    ./neovim
     ./python.nix
     ./bash.nix
     ./environment-vars.nix
