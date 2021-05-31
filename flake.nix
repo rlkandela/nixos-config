@@ -2,8 +2,8 @@
   description = "rlkandela's NixOS System Configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-20.09"; 					# Input from official channel of nixpkgs
-    home-manager.url = "github:nix-community/home-manager/release-20.09"; 	# Input from github of home-manager
+    nixpkgs.url = "nixpkgs/nixos-unstable"; 					# Input from official channel of nixpkgs
+    home-manager.url = "github:nix-community/home-manager/master";	 	# Input from github of home-manager
     # Set the nixpkgs channel to follow the previously mentioned nixpkgs
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
